@@ -27,7 +27,7 @@ TEST(Galindo_Javier_ComplexNumberTest, Can_Get_CompNumb) {
     EXPECT_EQ(im, z.getIm());
 }
 
-TEST(Galindo_Javier_ComplexNumberTest, Can_Add){
+TEST(Galindo_Javier_ComplexNumberTest, Can_Add) {
     double a_re = 5.0;
     double a_im = 10.0;
 
@@ -38,11 +38,11 @@ TEST(Galindo_Javier_ComplexNumberTest, Can_Add){
     ComplexNumber a(a_re, a_im);
     ComplexNumber b(b_re, b_im);
     ComplexNumber c = a + b;
-
-   EXPECT_EQ(a_re + b_re, c.getRe());
-   EXPECT_EQ(a_im + b_im, c.getIm());
-
+    
+    EXPECT_EQ(a_re + b_re, c.getRe());
+    EXPECT_EQ(a_im + b_im, c.getIm());
 }
+
 TEST(Galindo_Javier_ComplexNumberTest, Can_Subtract) {
     double a_re = 6.0;
     double a_im = 19.0;
@@ -55,5 +55,5 @@ TEST(Galindo_Javier_ComplexNumberTest, Can_Subtract) {
     ComplexNumber c = a - b;
 
     EXPECT_EQ (a_re - b_re, c.getRe());
-    EXPECT_EQ(a_im - b_im, c.getIm());
+    EXPECT_EQ (a_im - b_im, c.getIm());
 }
