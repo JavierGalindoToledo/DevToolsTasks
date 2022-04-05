@@ -38,7 +38,7 @@ TEST(Galindo_Javier_ComplexNumberTest, Can_Add) {
     ComplexNumber a(a_re, a_im);
     ComplexNumber b(b_re, b_im);
     ComplexNumber c = a + b;
-    
+
     EXPECT_EQ(a_re + b_re, c.getRe());
     EXPECT_EQ(a_im + b_im, c.getIm());
 }
@@ -54,6 +54,6 @@ TEST(Galindo_Javier_ComplexNumberTest, Can_Subtract) {
     ComplexNumber b(b_re, b_im);
     ComplexNumber c = a - b;
 
-    EXPECT_EQ (a_re - b_re, c.getRe());
-    EXPECT_EQ (a_im - b_im, c.getIm());
+    EXPECT_EQ(a_re - b_re, c.getRe());
+    EXPECT_EQ(a_im - b_im, c.getIm());
 }
