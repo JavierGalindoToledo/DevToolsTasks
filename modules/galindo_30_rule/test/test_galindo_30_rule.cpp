@@ -75,15 +75,6 @@ TEST(Javier_Galindo_Cell_Automaton, can_use_100_rule) {
     ASSERT_EQ(state, automat.get_state()[1]);
 }
 
-TEST(Javier_Galindo_Cell_Automaton, can_use_111_rule) {
-    std::vector<CellState> state{ CellState::ALIVE, CellState::ALIVE, CellState::ALIVE };
-    CellularAutomaton automat(2, 3, state);
-    automat.iterate(1);
-    state = { CellState::DEAD, CellState::DEAD, CellState::DEAD };
-
-    ASSERT_EQ(state, automat.get_state()[1]);
-}
-
 TEST(Javier_Galindo_Cell_Automaton, classic_seq_for_rule_30) {
     std::vector<CellState> state
     { CellState::DEAD, CellState::DEAD,  CellState::DEAD,
