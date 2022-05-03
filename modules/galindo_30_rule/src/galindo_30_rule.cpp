@@ -49,10 +49,10 @@ void CellularAutomaton::iterate(const unsigned int iterations) {
     unsigned int cells = 0;
     if (rows != 0) {
           cells = static_cast<unsigned int>(state[0].size());
-	}
-	
+    }
+
     std::vector<CellState> new_state(cols);
-	
+
     for (unsigned int iteration = 0; iteration < iterations; iteration++) {
         for (unsigned int r = 0; r < rows - 1; r++) {
             for (unsigned int c = 1; c < cells - 1; c++) {
@@ -75,10 +75,10 @@ CellState CellularAutomaton::rules(const int row, const int col) const {
         return CellState::ALIVE;
     }
 	if (state[row][col - 1] == CellState::DEAD &&
-		state[row][col] == CellState::ALIVE &&
-		state[row][col + 1] == CellState::ALIVE) {
-		return CellState::ALIVE;
-	}
+        state[row][col] == CellState::ALIVE &&
+        state[row][col + 1] == CellState::ALIVE) {
+        return CellState::ALIVE;
+    }
     if (state[row][col - 1] == CellState::ALIVE &&
         state[row][col] == CellState::DEAD &&
         state[row][col + 1] == CellState::DEAD) {
