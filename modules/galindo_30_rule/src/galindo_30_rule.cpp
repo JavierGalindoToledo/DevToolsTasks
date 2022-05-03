@@ -74,7 +74,7 @@ CellState CellularAutomaton::rules(const int row, const int col) const {
         state[row][col + 1] == CellState::DEAD) {
         return CellState::ALIVE;
     }
-	if (state[row][col - 1] == CellState::DEAD &&
+    if (state[row][col - 1] == CellState::DEAD &&
         state[row][col] == CellState::ALIVE &&
         state[row][col + 1] == CellState::ALIVE) {
         return CellState::ALIVE;

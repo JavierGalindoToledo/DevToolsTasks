@@ -16,7 +16,7 @@ class CellularAutomaton {
      CellularAutomaton(const unsigned int rows, const unsigned int cols,
          const std::vector<CellState>& states);
      ~CellularAutomaton() = default;
- 
+
      const std::vector <std::vector<CellState>>& get_state() const;
 
      void iterate(const unsigned int iterations);
@@ -25,7 +25,7 @@ class CellularAutomaton {
      std::vector<std::vector<CellState>> state;
      unsigned int cols = 0;
      unsigned int rows = 0;
- 
+
      CellState rules(const int row, const int col) const;
 };
 
