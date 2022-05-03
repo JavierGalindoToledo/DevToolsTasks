@@ -76,7 +76,8 @@ TEST(Javier_Galindo_Cell_Automaton, can_use_011_rule) {
 }
 
 TEST(Javier_Galindo_Cell_Automaton, can_use_100_rule) {
-    std::vector<CellState> state{ CellState::ALIVE, CellState::DEAD, CellState::DEAD };
+    std::vector<CellState> state{ CellState::ALIVE,
+        CellState::DEAD, CellState::DEAD };
     CellularAutomaton automat(2, 3, state);
     automat.iterate(1);
     state = { CellState::DEAD, CellState::ALIVE, CellState::DEAD };
