@@ -30,15 +30,6 @@ set_tests_properties (${prefix}_Out_Reange_Values PROPERTIES
     LABELS "${MODULE}")
 
 add_test(
-    NAME ${prefix}_Can_Add_And_Search
-    COMMAND ${APPLICATION} insert 1 find 1 find 2
-)
-
-set_tests_properties (${prefix}_Can_Add_And_Search PROPERTIES
-    PASS_REGULAR_EXPRESSION "\\(1 is found\\) \\(2 is not found\\)"
-    LABELS "${MODULE}")
-
-add_test(
     NAME ${prefix}_Handles_Incorrect_Command_Args
     COMMAND ${APPLICATION} push 1 find 1 find 2
 )
@@ -81,16 +72,7 @@ add_test(
 
 set_tests_properties (${prefix}_Can_Add_And_Search_Negative_Numbers PROPERTIES
     PASS_REGULAR_EXPRESSION "(-1 is found)"
-    LABELS "${MODULE}")
-
-add_test(
-    NAME ${prefix}_Can_Del_Negative_Numbers
-    COMMAND ${APPLICATION} insert -1 remove -1 find -1
-)
-
-set_tests_properties (${prefix}_Can_Del_Negative_Numbers PROPERTIES
-    PASS_REGULAR_EXPRESSION "(-1 is not found)"
-    LABELS "${MODULE}")
+    LABELS "${MODULE}"
 
 add_test(
     NAME ${prefix}_Handles_Numbers_With_Two_Minuses
@@ -126,13 +108,4 @@ add_test(
 
 set_tests_properties (${prefix}_Handles_Dash_Instead_Of_Number PROPERTIES
     PASS_REGULAR_EXPRESSION "- is not the number"
-    LABELS "${MODULE}")
-	
-add_test(
-    NAME ${prefix}_Can_Del_Numbers
-    COMMAND ${APPLICATION} insert 1 insert 2 remove 1 find 1
-)
-
-set_tests_properties (${prefix}_Can_Del_Numbers PROPERTIES
-    PASS_REGULAR_EXPRESSION "(1 is not found)"
     LABELS "${MODULE}")
