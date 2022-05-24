@@ -72,7 +72,7 @@ add_test(
 
 set_tests_properties (${prefix}_Can_Add_And_Search_Negative_Numbers PROPERTIES
     PASS_REGULAR_EXPRESSION "(-1 is found)"
-    LABELS "${MODULE}"
+    LABELS "${MODULE}")
 
 add_test(
     NAME ${prefix}_Handles_Numbers_With_Two_Minuses
